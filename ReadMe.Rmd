@@ -28,7 +28,7 @@ Here are the data for the project:
 
 Steps to reproduce this project
 
-The run_analysis.r will use the run_analysis.Rmd file to run the analysis and create a Tidy_Data file.
+The run_analysis_final.r will use the run_analysis.Rmd file to run the analysis and create a Tidy_Data file.
 This file contains the merged data from different tables, with a new label and also has just the mean and STD values from the orignal data. 
 
 Tidy dataset file DatasetHumanActivityRecognitionUsingSmartphones.txt (tab-delimited text)
