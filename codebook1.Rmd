@@ -1,0 +1,50 @@
+---
+title: "Codebook.Rmd"
+author: "Marcelladane"
+date: "23 July 2017"
+output: html_document
+---
+
+```{r set_path1}
+require(knitr)
+require(markdown)
+
+packages <- c("data.table")
+sapply(packages, require, character.only = TRUE, quietly = TRUE)
+
+path <- getwd()
+path
+```
+
+The run_analysis code will read the **'Human Activity Recognition Using Smartphones Data Set'** avaliable at *https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip* .
+
+Variables description
+```{r read_table}
+DataStr <- read.csv("data_structure.csv")
+write.table(DataStr, quote=FALSE, sep="\t", row.names=FALSE)
+
+```
+
+**Dataset structure**
+```{r DtStR}
+
+str(Tidy_Data)
+```
+
+**List the key variables**
+```{r Key_data}
+key(Tidy_Data)
+```
+
+**Summary of data
+```{r summary}
+summary(Tidy_Data)
+```
+
+
+**Save to file**
+```{r}
+f <- file.path(path, "DatasetHumanActivityRecognitionUsingSmartphones.txt")
+write.table(Tidy_Data, f, quote=FALSE, sep="\t", row.names=FALSE)
+```
+
